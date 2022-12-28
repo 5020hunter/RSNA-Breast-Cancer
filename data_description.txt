@@ -1,0 +1,68 @@
+Data Value Counts
+1    29519
+2    25187
+Name: site_id, dtype: int64
+
+R    27439
+L    27267
+Name: laterality, dtype: int64
+
+MLO    27903
+CC     26765
+AT        19
+LM        10
+ML         8
+LMO        1
+Name: view, dtype: int64
+
+50.0    2248
+62.0    2038
+64.0    2011
+54.0    2004
+57.0    1964
+        ... 
+26.0      11
+33.0      10
+29.0       7
+30.0       5
+31.0       4
+Name: age, Length: 63, dtype: int64
+
+0    53548
+1     1158
+Name: cancer, dtype: int64
+
+0    51737
+1     2969
+Name: biopsy, dtype: int64
+
+1.0    15772
+0.0     8249
+2.0     2265
+Name: BIRADS, dtype: int64
+
+0    53229
+1     1477
+Name: implant, dtype: int64
+
+B    12651
+C    12175
+A     3105
+D     1539
+Name: density, dtype: int64
+
+49     23529
+48      8699
+29      8267
+21      8221
+93      1915
+216     1908
+210     1070
+170      923
+190      145
+197       29
+Name: machine_id, dtype: int64
+
+False    47001
+True      7705
+Name: difficult_negative_case, dtype: int64
