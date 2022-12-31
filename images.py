@@ -8,7 +8,7 @@ from skimage import filters
 
 IMG_PX_SIZE = 2048
 train = pd.read_csv('data\\train.csv')
-
+train = train[train['cancer']==1]
 
 def histogram_equalization(img):
     m = int(np.max(img))
@@ -58,7 +58,7 @@ def image_processing(img):
     return cropped
 
 def show_multi_img(img_list:list,labels=None,columns=1,rows=1):
-    fig = plt.figure(figsize=(8, 8))
+    fig = plt.figure(figsize=(12, 12))
     count = 1
     for j in range(len(img_list)):
         for i in range(3):
@@ -71,7 +71,7 @@ def show_multi_img(img_list:list,labels=None,columns=1,rows=1):
     plt.tight_layout()
     plt.show()
 
-for iD in train['patient_id'].unique()[:5]:
+for iD in train['patient_id'].unique()[:2]:
     print(f'Patient_ID: {iD}')
     length = train[train['patient_id']==iD]['image_id'].values.shape[0]
     images=[]
