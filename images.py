@@ -71,14 +71,14 @@ def show_multi_img(img_list:list,labels=None,columns=1,rows=1):
     plt.tight_layout()
     plt.show()
 
-for iD in train['patient_id'].unique()[:2]:
+for iD in train['patient_id'].unique()[:1]:
     print(f'Patient_ID: {iD}')
     length = train[train['patient_id']==iD]['image_id'].values.shape[0]
     images=[]
     for num in train[train['patient_id']==iD]['image_id']:
         in_path = f'./images/{iD}/{num}.dcm'
-        ds = pydicom.read_file(in_path) #Read .dcm file
-        img = ds.pixel_array # Extract image information
+        ds = pydicom.dcmread(in_path) #Read .dcm file
+        img = np.array(ds.pixel_array, dtype=np.uint8) # Extract image information
         print(f'\tIMG_ID: {num}\tIMG_SHAPE: {img.shape}')
         new_img = image_processing(img)
         eq_img = histogram_equalization(new_img)
