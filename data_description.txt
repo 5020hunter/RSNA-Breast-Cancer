@@ -26,7 +26,7 @@ Name: view, dtype: int64
 29.0       7
 30.0       5
 31.0       4
-Name: age, Length: 63, dtype: int64
+Name: age, Length: 64, dtype: int64
 
 0    53548
 1     1158
@@ -36,6 +36,7 @@ Name: cancer, dtype: int64
 1     2969
 Name: biopsy, dtype: int64
 
+NaN    28420
 1.0    15772
 0.0     8249
 2.0     2265
@@ -45,10 +46,11 @@ Name: BIRADS, dtype: int64
 1     1477
 Name: implant, dtype: int64
 
-B    12651
-C    12175
-A     3105
-D     1539
+NaN    25236
+B      12651
+C      12175
+A       3105
+D       1539
 Name: density, dtype: int64
 
 49     23529
